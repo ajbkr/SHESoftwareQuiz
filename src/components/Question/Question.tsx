@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RouteComponentProps } from "@reach/router";
 import { useSelector, useDispatch } from "react-redux";
 import { answerQuestion } from "../../store/triviaActions";
@@ -18,12 +18,13 @@ function Question(props: QuestionIProps) {
   const dispatch = useDispatch();
 
   // Add correct answer to incorrect answers at random position
-  const answers = [...question.incorrect_answers];
-  answers.splice(
+  const allAnswers = [...question.incorrect_answers];
+  allAnswers.splice(
     Math.floor(Math.random() * question.incorrect_answers.length),
     0,
     question.correct_answer
   );
+  const [answers] = useState(allAnswers);
 
   const onChange = (e: any) => {
     dispatch(answerQuestion(props.questionIndex, e.target.value));

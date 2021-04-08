@@ -1,7 +1,7 @@
 # Suggestions
 
 - Use TS interfaces to enforce the contract between components and their props
-- " " components and the store's actions
+- Use TS interfaces to enforce the contract between components and the store's actions
 - Change TS's "any" to the correct type(s)
 - Rename some functions to ensure their behaviour is more explicit (maybe add some comments too)
 - Single-letter variables could perhaps be named more fully

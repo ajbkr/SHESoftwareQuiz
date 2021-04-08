@@ -1,3 +1,24 @@
+# Suggestions
+
+- Use TS interfaces to enforce the contract between components and their props
+- " " components and the store's actions
+- Change TS's "any" to the correct type(s)
+- Rename some functions to ensure their behaviour is more explicit (maybe add some comments too)
+- Single-letter variables could perhaps be named more fully
+- Move the selector logic from the components to the store as getters, if the app grows in complexity
+- Importing db.json into tests could be improved further by using fixtures instead
+- No CSS changed, though the "Start New Quiz" button should probably remain centred horizontally
+- ARIA attributes could be added to question labels, etc.
+- Given the size of the app, I'd consider getting rid of Redux (feels like overkill)
+
+To make production ready:
+
+- Update all dependencies
+- Ensure tree-shaking is enabled
+- Update browserslist and ensure relevant browsers are targeted (think @babel/preset-env)
+- Check rendered HTML/CSS cross-browser
+- Increase code coverage a little, and if it were a more complex app, maybe add some end-to-end tests using Cypress or similar
+
 ## Introduction
 
 Quiz is a small application that is using a sample of questions to display list of multiselect trivia questions. Users can start the quiz, answer trivia questions and complete the quiz when all questions are answered.
